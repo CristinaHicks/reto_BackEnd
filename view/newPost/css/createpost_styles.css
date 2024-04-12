@@ -1,0 +1,100 @@
+/*GENERAL*/
+body {
+  background-color: #f5f5f5;
+}
+
+/* NAV */
+.nav__container {
+  height: 60px;
+}
+.nav__container .nav__form__container {
+  width: 420px;
+  span {
+    font-weight: 600;
+  }
+}
+
+.btnClose:hover {
+  background: rgba(0, 0, 255, 0.086);
+  svg {
+    fill: blue;
+  }
+}
+
+/*BUTTONS*/
+.btn {
+  font-size: small;
+}
+.btnHoverNav:active {
+  font-weight: 500;
+}
+
+.btnHoverNav:hover {
+  background: rgba(0, 0, 255, 0.086);
+  color: blue;
+}
+
+.btn-primary {
+  font-weight: 600;
+}
+
+/*FORMULARIO*/
+.cover-img-btn {
+  border: 1px solid #cccccc;
+  font-weight: 500;
+  color: #3d3d3d;
+}
+
+.cover-img-btn:hover {
+  border: 1px solid #cccccc;
+}
+
+.formularioCard {
+  padding: 15px;
+}
+
+.inputHeading {
+  font-size: 2em;
+  font-weight: 800;
+  color: #3d3d3d;
+  height: 2em;
+}
+
+.tagInput {
+  font-size: small;
+  color: #a9a7a7;
+}
+
+.txtArea {
+  font-family: monospace;
+  font-size: large;
+  color: #3d3d3d;
+  height: 300px;
+  padding: 15px;
+}
+
+.custom-tooltip {
+  background: black;
+  border-radius: 10px 10px 10px 10px;
+  font-size: small;
+  code {
+    color: #cccccc;
+  }
+}
+
+.inputFb {
+  margin-top: 10px;
+}
+
+/*TOOLBAR*/
+.btn-toolbar {
+  background-color: #f5f5f5;
+  padding: 10px;
+}
+
+.btnToolBar:hover {
+  background: rgba(0, 0, 255, 0.086);
+  svg {
+    fill: blue;
+  }
+}

@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Post - DEV Community</title>
+    <!--LINKS CSS Y BOOTSTRAP-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/createpost_styles.css" />
+  </head>
+  <body>
+    <!--NAV BAR-->
+    <header>
+      <nav class="navbar p-0 px-3 nav__container">
+        <div class="container-xl p-0 justify-content-between flex-nowrap">
+          <div class="d-flex">
+            <a class="navbar-brand" href="#">
+              <img
+                src="https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png"
+                alt=""
+                height="40"
+              />
+            </a>
+            <div
+              class="d-none d-md-block m-auto nav__form__container flex-fill"
+            >
+              <span>Create Post</span>
+            </div>
+          </div>
+          <div class="d-flex flex-fill justify-content-end btn-toolbar gap-1">
+            <button type="button" class="btn btnHoverNav"><b>Edit</b></button>
+            <button type="button" class="btn btnHoverNav">Preview</button>
+          </div>
+          <div class="d-flex">
+            <button type="button" class="btn btnClose">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="currentColor"
+                class="bi bi-x"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="col-9 container-fluid">
+      <div class="card bg-white border-muted">
+        <!--01 FORMULARIO-->
+        <div class="row formularioCard">
+          <div
+            class="input-group input-group-sm"
+            data-bs-toggle="tooltip"
+            data-bs-placement="bottom"
+            data-bs-custom-class="custom-tooltip"
+            data-bs-title="Use a ratio of 1000:420 for best results"
+          >
+            <span class="input-group-text cover-img-btn" id="basic-addon1"
+              >Add cover image</span
+            >
+            <input type="text" class="form-control" id="coverImgBtn" />
+          </div>
+
+          <div class="input-group">
+            <textarea
+              class="form-control border-0 inputHeading"
+              placeholder="New post title here..."
+              id="postTitleTxt"
+            ></textarea>
+          </div>
+          <div class="input-group">
+            <input
+              type="text"
+              class="form-control border-0 tagInput"
+              placeholder="Add up to 4 tags..."
+              id="tagInputPost"
+            />
+          </div>
+          <div class="input-group inputFb border-muted">
+            <input
+              type="text"
+              class="form-control tagInput"
+              placeholder="comments"
+              id="commentInputPost"
+            />
+            <input
+              type="text"
+              class="form-control tagInput"
+              placeholder="date"
+              id="dateInputPost"
+            />
+            <input
+              type="text"
+              class="form-control tagInput"
+              placeholder="id"
+              id="idInputPost"
+            />
+            <input
+              type="text"
+              class="form-control tagInput"
+              placeholder="user name"
+              id="userNameInputPost"
+            />
+            <input
+              type="text"
+              class="form-control tagInput"
+              placeholder="user img"
+              id="userImgInputPost"
+            />
+          </div>
+        </div>
+
+        <!--02 MENU FORMATO-->
+        <div class="btn-toolbar gap-1" role="toolbar">
+          <button
+            type="button"
+            class="btn btnToolBar"
+            id="boldBtn"
+            data-bs-toggle="tooltip"
+            data-bs-html="true"
+            data-bs-placement="bottom"
+            data-bs-custom-class="custom-tooltip"
+            data-bs-title="Bold <code>CTRL+B</code> "
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="currentColor"
+              class="bi bi-type-bold icon"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8.21 13c2.106 0 3.412-1.087 3.412-2.823 0-1.306-.984-2.283-2.324-2.386v-.055a2.176 2.176 0 0 0 1.852-2.14c0-1.51-1.162-2.46-3.014-2.46H3.843V13zM5.908 4.674h1.696c.963 0 1.517.451 1.517 1.244 0 .834-.629 1.32-1.73 1.32H5.908V4.673zm0 6.788V8.598h1.73c1.217 0 1.88.492 1.88 1.415 0 .943-.643 1.449-1.832 1.449H5.907z"
+              />
+            </svg>
+          </button>
+
+          <button
+            type="button"
+            class="btn btnToolBar"
+            id="italicBtn"
+            data-bs-toggle="tooltip"
+            data-bs-html="true"
+            data-bs-placement="bottom"
+            data-bs-custom-class="custom-tooltip"
+            data-bs-title="Italic <code>CTRL+I</code>"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="currentColor"
+              class="bi bi-type-italic icon"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M7.991 11.674 9.53 4.455c.123-.595.246-.71 1.347-.807l.11-.52H7.211l-.11.52c1.06.096 1.128.212 1.005.807L6.57 11.674c-.123.595-.246.71-1.346.806l-.11.52h3.774l.11-.52c-1.06-.095-1.129-.211-1.006-.806z"
+              />
+            </svg>
+          </button>
+
+          <button
+            type="button"
+            class="btn btnToolBar"
+            id="linkBtn"
+            data-bs-toggle="tooltip"
+            data-bs-html="true"
+            data-bs-placement="bottom"
+            data-bs-custom-class="custom-tooltip"
+            data-bs-title="Link <code>CTRL+K</code>"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="currentColor"
+              class="bi bi-link-45deg icon"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z"
+              />
+              <path
+                d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z"
+              />
+            </svg>
+          </button>
+
+          <button
+            type="button"
+            class="btn btnToolBar"
+            id="orderedListBtn"
+            data-bs-toggle="tooltip"
+            data-bs-placement="bottom"
+            data-bs-custom-class="custom-tooltip"
+            data-bs-title="Ordered list"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="currentColor"
+              class="bi bi-list-ol icon"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5"
+              />
+              <path
+                d="M1.713 11.865v-.474H2c.217 0 .363-.137.363-.317 0-.185-.158-.31-.361-.31-.223 0-.367.152-.373.31h-.59c.016-.467.373-.787.986-.787.588-.002.954.291.957.703a.595.595 0 0 1-.492.594v.033a.615.615 0 0 1 .569.631c.003.533-.502.8-1.051.8-.656 0-1-.37-1.008-.794h.582c.008.178.186.306.422.309.254 0 .424-.145.422-.35-.002-.195-.155-.348-.414-.348h-.3zm-.004-4.699h-.604v-.035c0-.408.295-.844.958-.844.583 0 .96.326.96.756 0 .389-.257.617-.476.848l-.537.572v.03h1.054V9H1.143v-.395l.957-.99c.138-.142.293-.304.293-.508 0-.18-.147-.32-.342-.32a.33.33 0 0 0-.342.338zM2.564 5h-.635V2.924h-.031l-.598.42v-.567l.629-.443h.635z"
+              />
+            </svg>
+          </button>
+
+          <button
+            type="button"
+            class="btn btnToolBar"
+            id="unorderedListBtn"
+            data-bs-toggle="tooltip"
+            data-bs-placement="bottom"
+            data-bs-custom-class="custom-tooltip"
+            data-bs-title="Unordered list"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="currentColor"
+              class="bi bi-list-ul icon"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
+              />
+            </svg>
+          </button>
+
+          <button
+            type="button"
+            class="btn btnToolBar"
+            id="headingBtn"
+            data-bs-toggle="tooltip"
+            data-bs-placement="bottom"
+            data-bs-custom-class="custom-tooltip"
+            data-bs-title="Heading"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="currentColor"
+              class="bi bi-type-h1 icon"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="m 7.6 13 V 3 H 6.3 V 7.2 H 1.3 V 3 H 0 V 13 H 1.3 V 8.4 H 6.3 V 13 Z"
+              />
+            </svg>
+          </button>
+
+          <button
+            type="button"
+            class="btn btnToolBar"
+            id="quoteBtn"
+            data-bs-toggle="tooltip"
+            data-bs-placement="bottom"
+            data-bs-custom-class="custom-tooltip"
+            data-bs-title="Quote"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="currentColor"
+              class="bi bi-quote icon"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388q0-.527.062-1.054.093-.558.31-.992t.559-.683q.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 9 7.558V11a1 1 0 0 0 1 1zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612q0-.527.062-1.054.094-.558.31-.992.217-.434.559-.683.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 3 7.558V11a1 1 0 0 0 1 1z"
+              />
+            </svg>
+          </button>
+
+          <button
+            type="button"
+            class="btn btnToolBar"
+            id="codeBtn"
+            data-bs-toggle="tooltip"
+            data-bs-placement="bottom"
+            data-bs-custom-class="custom-tooltip"
+            data-bs-title="Code"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="currentColor"
+              class="bi bi-code icon"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M5.854 4.854a.5.5 0 1 0-.708-.708l-3.5 3.5a.5.5 0 0 0 0 .708l3.5 3.5a.5.5 0 0 0 .708-.708L2.707 8zm4.292 0a.5.5 0 0 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L13.293 8z"
+              />
+            </svg>
+          </button>
+
+          <button
+            type="button"
+            class="btn btnToolBar"
+            id="codeBlockBtn"
+            data-bs-toggle="tooltip"
+            data-bs-placement="bottom"
+            data-bs-custom-class="custom-tooltip"
+            data-bs-title="Code block"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="currentColor"
+              class="bi bi-code-square icon"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"
+              />
+              <path
+                d="M6.854 4.646a.5.5 0 0 1 0 .708L4.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0m2.292 0a.5.5 0 0 0 0 .708L11.793 8l-2.647 2.646a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708 0"
+              />
+            </svg>
+          </button>
+
+          <button
+            type="button"
+            class="btn btnToolBar"
+            id="embedBtn"
+            data-bs-toggle="tooltip"
+            data-bs-html="true"
+            data-bs-placement="bottom"
+            data-bs-custom-class="custom-tooltip"
+            data-bs-title="Embed <code>CTRL+SHIFT+K</code>"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="currentColor"
+              class="bi bi-lightning-charge icon"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09zM4.157 8.5H7a.5.5 0 0 1 .478.647L6.11 13.59l5.732-6.09H9a.5.5 0 0 1-.478-.647L9.89 2.41z"
+              />
+            </svg>
+          </button>
+
+          <button
+            type="button"
+            class="btn btnToolBar"
+            id="imageBtn"
+            data-bs-toggle="tooltip"
+            data-bs-placement="bottom"
+            data-bs-custom-class="custom-tooltip"
+            data-bs-title="Upload image"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="currentColor"
+              class="bi bi-image icon"
+              viewBox="0 0 16 16"
+            >
+              <path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
+              <path
+                d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1z"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <!--03 CAJA TEXTO-->
+        <div class="row">
+          <div class="input-group">
+            <textarea
+              class="form-control border-0 txtArea"
+              placeholder="Write your post content here..."
+              id="textAreaPost"
+            ></textarea>
+          </div>
+        </div>
+      </div>
+
+      <!--04 SUBMIT-->
+      <div
+        class="btn-toolbar gap-1"
+        role="toolbar"
+        aria-label="Toolbar with button groups"
+      >
+        <button type="button" class="btn btn-primary" id="publishBtn">
+          Publish
+        </button>
+        <button type="button" class="btn btnHoverNav" id="saveDraftBtn">
+          Save draft
+        </button>
+        <button type="button" class="btn btnHoverNav" id="postOptionBtn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-nut"
+            viewBox="0 0 16 16"
+            version="1.1"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            transform="matrix(6.123233995736766e-17,1,-1,6.123233995736766e-17,0,0)"
+          >
+            <path
+              d="m11.42 2 3.428 6-3.428 6H4.58L1.152 8 4.58 2zM4.58 1a1 1 0 0 0-.868.504l-3.428 6a1 1 0 0 0 0 .992l3.428 6A1 1 0 0 0 4.58 15h6.84a1 1 0 0 0 .868-.504l3.429-6a1 1 0 0 0 0-.992l-3.429-6A1 1 0 0 0 11.42 1z"
+            ></path>
+            <path
+              d="M6.848 5.933a2.5 2.5 0 1 0 2.5 4.33 2.5 2.5 0 0 0-2.5-4.33m-1.78 3.915a3.5 3.5 0 1 1 6.061-3.5 3.5 3.5 0 0 1-6.062 3.5z"
+            ></path>
+          </svg>
+        </button>
+        <button type="reset" class="btn btnHoverNav" id="revertBtn">
+          Revert new changes
+        </button>
+      </div>
+    </div>
+
+    <!--SCRIPT JS Y BOOTSTRAP-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="createpost.js"></script>
+  </body>
+</html>
